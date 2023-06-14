@@ -19,8 +19,6 @@ public class LeftLeg : MonoBehaviour
     void Start()
     {
         jointController = left_thigh.GetComponent<HingeJoint>();
-        if (jointController == null) print("Couldn't find HingeJoint");
-        else print("Got a joint controller");
         var motor = jointController.motor;
         targetVelocity = 0;
         motor.targetVelocity = targetVelocity;
@@ -53,7 +51,6 @@ public class LeftLeg : MonoBehaviour
         var motor = jointController.motor;
         motor.targetVelocity = targetVelocity;
         jointController.motor = motor;   
-        print("OPEN  "+jointController.velocity);
         return;
     }
 

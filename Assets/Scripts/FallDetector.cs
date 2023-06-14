@@ -5,7 +5,7 @@ using UnityEngine;
 public class FallDetector : MonoBehaviour
 {
     public GameObject head;
-    public float threshold = 3;
+    public float threshold = 1;
     // Start is called before the first frame update
     private Vector3 startposition;
     void Start()
