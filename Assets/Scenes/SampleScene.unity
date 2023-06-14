@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028353, g: 0.22571383, b: 0.30692253, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -578,6 +578,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   right_thigh: {fileID: 560067115}
   move: 1000
+--- !u!114 &1093309154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093309148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c0fe28c5e2942bdbe9c6602aabb712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jawAngleClosed: 10
+  jawAngleOpen: -60
+  jawAngle: 0
+  damping: 5
+  springCoefficient: 200
 --- !u!54 &1374331086 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 1567429219539498697, guid: 9d750c4b981ad48999282663a02d4ccf, type: 3}
@@ -680,6 +697,10 @@ PrefabInstance:
       propertyPath: left_thigh
       value: 
       objectReference: {fileID: 1055385255}
+    - target: {fileID: 1659818147256878762, guid: 9d750c4b981ad48999282663a02d4ccf, type: 3}
+      propertyPath: m_UseLimits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1659818147256878762, guid: 9d750c4b981ad48999282663a02d4ccf, type: 3}
       propertyPath: m_UseSpring
       value: 1
@@ -910,6 +931,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7276927484517579676, guid: 9d750c4b981ad48999282663a02d4ccf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1093309153}
+    - targetCorrespondingSourceObject: {fileID: 7276927484517579676, guid: 9d750c4b981ad48999282663a02d4ccf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1093309154}
     - targetCorrespondingSourceObject: {fileID: 6189444248116740010, guid: 9d750c4b981ad48999282663a02d4ccf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 971454388}
