@@ -16,8 +16,8 @@ public class ResetPosition : MonoBehaviour
     bool triggerPressedPreviousFrame = false;
     int triggerPressCounter = 0;
 
-    public GameObject testSphere;
-    public GameObject testCube;
+//    public GameObject testSphere;
+//    public GameObject testCube;
 
     // Start is called before the first frame update
     void Start()
@@ -39,10 +39,10 @@ public class ResetPosition : MonoBehaviour
     public void Reset()
     {
 
-        transform.position = initialPosition;
+        transform.position = new Vector3(initialPosition.x, initialPosition.y + 20f, initialPosition.z);
         transform.rotation = initialRotation;
-	if (testCube.active) testCube.SetActive(false);
-        else testCube.SetActive(true);
+//	if (testCube.active) testCube.SetActive(false);
+//        else testCube.SetActive(true);
     }
 
     private void Update() {
