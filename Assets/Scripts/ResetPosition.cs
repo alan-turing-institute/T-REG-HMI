@@ -16,6 +16,9 @@ public class ResetPosition : MonoBehaviour
     bool triggerPressedPreviousFrame = false;
     int triggerPressCounter = 0;
 
+    public GameObject testSphere;
+    public GameObject testCube;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,14 +41,17 @@ public class ResetPosition : MonoBehaviour
 
         transform.position = initialPosition;
         transform.rotation = initialRotation;
+	if (testCube.active) testCube.SetActive(false);
+        else testCube.SetActive(true);
     }
 
     private void Update() {
-        if (device.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerButtonPressed) && triggerButtonPressed)
-        {
+        if (device.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerButtonPressed) && triggerButtonPressed) {
+
             if (! triggerPressedPreviousFrame) {
                 triggerPressCounter += 1;
                 triggerPressedPreviousFrame = true;
+		print("Trigger pressed "+triggerPressCounter);
             }
         } else {
             triggerPressedPreviousFrame = false;
