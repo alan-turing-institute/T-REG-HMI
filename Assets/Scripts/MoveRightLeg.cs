@@ -33,10 +33,10 @@ public class RightLeg : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKey("o")) {
+        if (Input.GetKey("p")) {
             MoveLeg(move);
         }
-        else if (Input.GetKey("p")) {
+        else if (Input.GetKey("o")) {
             MoveLeg(-move);
         }
         else {
