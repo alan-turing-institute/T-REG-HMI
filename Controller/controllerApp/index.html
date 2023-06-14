@@ -93,7 +93,9 @@ body
       function init() {
 
           // Connect to Web Socket
-          ws = new WebSocket("ws://172.187.194.68:9010");
+          //ws = new WebSocket("ws://localhost:9010");
+          ws = new WebSocket("ws://localhost:8000");
+//          ws = new WebSocket("ws://172.187.194.68:9010");
 
           // Set event handlers.
           ws.onopen = function() {
@@ -115,13 +117,15 @@ body
           };
       }
 
-    function sendPositions(joy1X, joy1Y, joy2X, joy2Y) {
+      function sendPositions(joy1X, joy1Y, joy2X, joy2Y, joy3X, joy3Y) {
 
-      if (joy1X+joy1Y+joy2X+joy2Y != 0) {
+      if (joy1X+joy1Y+joy2X+joy2Y+joy3X+joy3Y != 0) {
         let positionOutput = `{ "joy1X": ${joy1X}`;
           positionOutput += `, "joy1Y": ${joy1Y}`;
           positionOutput += `, "joy2X": ${joy2X}`;
-          positionOutput += `, "joy2Y": ${joy2Y}}`;
+          positionOutput += `, "joy2Y": ${joy2Y}`;
+          positionOutput += `, "joy3X": ${joy3X}`;
+          positionOutput += `, "joy3Y": ${joy3Y}}`;
         ws.send(positionOutput);
         lastFrameCentred = false;
       } else if (! lastFrameCentred) {

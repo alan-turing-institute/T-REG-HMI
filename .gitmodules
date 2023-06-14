@@ -1,0 +1,3 @@
+[submodule "Controller/webSocketServer/wsServer"]
+	path = Controller/webSocketServer/wsServer
+	url = https://github.com/Theldus/wsServer
