@@ -6,26 +6,28 @@ using UnityEngine.SceneManagement;
 public class FallDetector : MonoBehaviour
 {
     public GameObject head;
-    public float threshold = 1;
+    private Vector3 headPosition;
+    private float threshold = 1;
 
-    private Vector3 startPosition;
+    private GameObject lowerSpine;
+    private Vector3 spinePosition;
     private float totalDistance;
     
     // Start is called before the first frame update
     void Start()
     {
-        startPosition = transform.position; 
+        lowerSpine = GameObject.Find("lower_spine");
+        spinePosition = lowerSpine.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
         float distance = Vector3.Distance( 
-            startPosition, transform.position 
+            spinePosition, lowerSpine.transform.position 
             );
         totalDistance += distance;
-        startPosition = transform.position;
-        print(totalDistance);
+        spinePosition = lowerSpine.transform.position;
         
         float headHeight = head.transform.position.y;
         if (headHeight < threshold)
