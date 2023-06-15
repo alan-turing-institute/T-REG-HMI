@@ -6,7 +6,7 @@ public class MoveRightLeg : MonoBehaviour
 {
     protected HingeJoint jointController;
 
-    public GameObject right_thigh;
+    private GameObject right_thigh;
     public float move=1000;
 
     private Vector3 position;
@@ -18,7 +18,9 @@ public class MoveRightLeg : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        right_thigh = GameObject.Find("right_thigh");
         jointController = right_thigh.GetComponent<HingeJoint>();
+
         var motor = jointController.motor;
         targetVelocity = 0;
         motor.targetVelocity = targetVelocity;

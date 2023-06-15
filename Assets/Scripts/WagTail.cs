@@ -6,10 +6,10 @@ public class WagTail : MonoBehaviour
 {
     protected HingeJoint[] jointController;
 
-    public GameObject tail_1;
-    public GameObject tail_2;
-    public GameObject tail_3;
-    public GameObject tail_3_end;
+    private GameObject tail_1;
+    private GameObject tail_2;
+    private GameObject tail_3;
+    private GameObject tail_3_end;
     public float move=50;
 
     private Vector3 position;
@@ -21,6 +21,11 @@ public class WagTail : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        tail_1 = GameObject.Find("tail_1");
+        tail_2 = GameObject.Find("tail_2");
+        tail_3 = GameObject.Find("tail_3");
+        tail_3_end = GameObject.Find("tail_3_end");
+        
         jointController = new HingeJoint[] {
             tail_1.GetComponent<HingeJoint>(),
             tail_2.GetComponent<HingeJoint>(), 
