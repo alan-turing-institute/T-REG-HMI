@@ -10,7 +10,7 @@ public class WagTail : MonoBehaviour
     public GameObject tail_2;
     public GameObject tail_3;
     public GameObject tail_3_end;
-    public float move;
+    public float move=50;
 
     private Vector3 position;
     private float velocity;

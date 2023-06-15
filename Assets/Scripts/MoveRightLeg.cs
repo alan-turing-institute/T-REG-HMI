@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RightLeg : MonoBehaviour
+public class MoveRightLeg : MonoBehaviour
 {
     protected HingeJoint jointController;
 
     public GameObject right_thigh;
-    public float move;
+    public float move=1000;
 
     private Vector3 position;
     private float velocity;
