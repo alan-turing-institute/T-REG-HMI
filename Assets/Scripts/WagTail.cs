@@ -42,7 +42,7 @@ public class WagTail : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        /*
         if (Input.GetKey("f")) {
             MoveTail(move);
         }
@@ -52,6 +52,7 @@ public class WagTail : MonoBehaviour
         else {
             MoveTail(0f);
         }
+        */
     }
 
     public void MoveTail(float targetVelocity) {

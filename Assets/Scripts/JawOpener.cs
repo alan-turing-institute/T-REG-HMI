@@ -31,6 +31,7 @@ public class JawOpener : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetKeyDown("z"))
         {
             jawAngle = jawAngleClosed;
@@ -39,9 +40,19 @@ public class JawOpener : MonoBehaviour
         {
             jawAngle = jawAngleOpen;
         }
-
+        */
         SetSpringParams(jawAngle, damping, springCoefficient);
     }
+
+    public void OpenJaw() {
+        jawAngle = jawAngleOpen;
+    }
+
+    public void CloseJaw() {
+        jawAngle = jawAngleClosed;
+    }
+
+
 
     private void SetSpringParams(float targetAngle,
                                  float damping,
