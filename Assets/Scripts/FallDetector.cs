@@ -13,7 +13,13 @@ public class FallDetector : MonoBehaviour
     private Vector3 spinePosition;
     private float totalDistance;
     
+    private float distanceScale = 1.0f;
+
+    private static float bestDistance;
+
     private TextDisplay display;
+
+    private bool restartFlag = false;
 
     public float getTotalDistance()
     {
@@ -34,8 +40,8 @@ public class FallDetector : MonoBehaviour
     {
         float distance = Vector3.Distance( 
             spinePosition, lowerSpine.transform.position 
-            );
-        totalDistance += distance;
+        );
+        totalDistance += distanceScale * distance;
         spinePosition = lowerSpine.transform.position;
         
         display.Info(string.Format("Distance: {0:N1} m", totalDistance / 5.0));
@@ -43,11 +49,37 @@ public class FallDetector : MonoBehaviour
         float headHeight = head.transform.position.y;
         if (headHeight < threshold)
         {
-            display.Announce("Fell over!");
+            
+            if (totalDistance > bestDistance) {
+                bestDistance = totalDistance;
+            }
+            
+            display.Announce(
+                string.Format(
+                    "Fell over!\nPress any key to try again\nBest so far: {0:N1} m",
+                    bestDistance / 5.0
+                )
+            );
+            
+            distanceScale = 0.0f;
+            Time.timeScale = 0.2f;
+
+            Invoke("RestartScene", 0.1f);
+        }
+
+        if (Input.anyKey && restartFlag) {
+            restartFlag = false;
+            Time.timeScale = 1.0f;
+            distanceScale = 1.0f;
+
             SceneManager.LoadScene( 
-                SceneManager.GetActiveScene().buildIndex 
+               SceneManager.GetActiveScene().buildIndex 
             );
         }
-        
+    }
+
+    public void RestartScene()
+    {
+        restartFlag = true;
     }
 }

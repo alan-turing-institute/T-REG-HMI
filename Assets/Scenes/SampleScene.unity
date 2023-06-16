@@ -349,7 +349,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00091061427, y: 0.011140074, z: -0.000989114}
+  m_ConnectedAnchor: {x: -0.0009106138, y: 0.011140074, z: -0.0009891122}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -467,11 +467,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &560067115 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 60672967691555042, guid: 9d750c4b981ad48999282663a02d4ccf, type: 3}
-  m_PrefabInstance: {fileID: 2179312325953872192}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &586086166
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,10 +527,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 034725c55139c461b9f1cb65d0fe277a, type: 3}
-    m_FontSize: 100
+    m_FontSize: 72
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 200
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -668,7 +663,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00049374125, y: 0.00065432844, z: 0.0013100875}
+  m_ConnectedAnchor: {x: -0.0004937412, y: 0.0006543282, z: 0.0013100875}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -953,8 +948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e8e7717558e4fc7bff832094ef99ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  right_thigh: {fileID: 560067115}
-  move: 2000
+  move: 1500
 --- !u!114 &1093309154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -984,11 +978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a98201efac9450382b751bd95bbe20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tail_1: {fileID: 756631866}
-  tail_2: {fileID: 1352578011}
-  tail_3: {fileID: 327222845}
-  tail_3_end: {fileID: 2137181438}
-  move: 50
+  move: 150
 --- !u!1 &1350670379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,7 +1069,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0011891343, y: 0.017363627, z: 0.00017952081}
+  m_ConnectedAnchor: {x: -0.0011891339, y: 0.01736362, z: 0.00017952267}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -1282,7 +1272,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 4.8449855e-10, y: 6.913542e-11, z: 0.0000000018565471}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -1358,7 +1348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1490381516979420032, guid: 9d750c4b981ad48999282663a02d4ccf, type: 3}
       propertyPath: move
-      value: 2000
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 1490381516979420032, guid: 9d750c4b981ad48999282663a02d4ccf, type: 3}
       propertyPath: m_Enabled
